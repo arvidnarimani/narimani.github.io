@@ -19,3 +19,33 @@ h1, h2, h3 {
 strong, b {
   font-weight: var(--strong-weight);
 }
+
+.home {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 0 18px;
+}
+
+.home-link {
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.home-spacer {
+  height: 18px;
+}
+
+.x-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Make the logo match text scale */
+.x-logo {
+  width: 1.1em;
+  height: 1.1em;
+  display: inline-block;
+  vertical-align: -0.12em;
+  fill: currentColor;
+}
