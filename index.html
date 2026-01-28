@@ -3,12 +3,71 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arvid Narimani — Papers</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <title>Arvid Narimani — Preprints</title>
 </head>
+
 <body>
-  <h1>Papers</h1>
-  <ul>
-    <li><a href="papers/paper-1.html">Paper 1 (metadata page)</a></li>
-  </ul>
+  <header class="site-header">
+    <div class="site-title">
+      <h1>Arvid Narimani</h1>
+      <p class="site-subtitle">Preprints & working papers</p>
+    </div>
+
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="#preprints">Preprints</a>
+      <a href="#cv" class="muted" title="Placeholder: add later">CV</a>
+      <a href="#projects" class="muted" title="Placeholder: add later">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    <section id="preprints">
+      <h2>Preprints</h2>
+
+      <ul class="paper-list">
+        <li>
+          <a href="papers/theologie-sans-foi-2021.html">Peut-on 'faire de la théologie' sans la foi ?</a>
+          <span class="paper-meta">2021</span>
+        </li>
+      </ul>
+
+      <p class="hint">
+        Add a new paper by creating <code>papers/&lt;slug&gt;.html</code> and then adding one new
+        <code>&lt;li&gt;...&lt;/li&gt;</code> line here.
+      </p>
+    </section>
+
+    <section id="cv">
+      <h2>CV</h2>
+      <p class="muted">Placeholder. Add <code>cv.html</code> later and change this section into a link.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="muted">Placeholder. Add links here later (datasets, code, editions, etc.).</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li>
+          X: <a href="https://x.com/REPLACE_WITH_YOUR_HANDLE">https://x.com/REPLACE_WITH_YOUR_HANDLE</a>
+        </li>
+        <li>
+          ORCID: <a href="https://orcid.org/REPLACE_WITH_YOUR_ORCID">https://orcid.org/REPLACE_WITH_YOUR_ORCID</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="y"></span> Arvid Narimani</p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
