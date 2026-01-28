@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+:root {
+  --text-weight: 400;
+  --strong-weight: 600;   /* use 500 if you want lighter */
+  --heading-weight: 600;
+}
+
+body {
+  font-family: "STIX Two Text", serif;
+  font-weight: var(--text-weight);
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-weight: var(--heading-weight);
+}
+
+strong, b {
+  font-weight: var(--strong-weight);
+}
