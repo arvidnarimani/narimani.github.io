@@ -1,1 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/site.css">
+
+  <!-- Google Scholar / Highwire-style meta tags -->
+  <meta name="citation_title" content="Building a Reproducible Mining Pipeline for óðal/aþal lexical complex in Diplomatarium Islandicum and Norwegian Medieval Latin Texts" />
+  <meta name="citation_author" content="Arvid Narimani" />
+  <meta name="citation_publication_date" content="2026/01/01" />
+
+  <!-- DOI (this record; v1) -->
+  <meta name="citation_doi" content="10.5281/zenodo.18114393" />
+  <meta name="citation_abstract_html_url" content="https://doi.org/10.5281/zenodo.18114393" />
+
+  <!-- Version-specific PDF (v1, Zenodo) -->
+  <meta name="citation_pdf_url" content="https://zenodo.org/records/18114393/files/Diplom_Is%2Bcorp_dic_Norw_Medi_Lat.pdf?download=1" />
+  <meta name="citation_version" content="v1" />
+
+  <title>Building a Reproducible Mining Pipeline for óðal/aþal lexical complex in Diplomatarium Islandicum and Norwegian Medieval Latin Texts — Arvid Narimani</title>
+</head>
+
+<body>
+  <header>
+    <h1>Building a Reproducible Mining Pipeline for óðal/aþal lexical complex in Diplomatarium Islandicum and Norwegian Medieval Latin Texts</h1>
+
+    <details class="meta">
+      <summary>Métadonnées</summary>
+
+      <div class="meta-body">
+        <p>Arvid Narimani (2026)</p>
+        <p>ORCID :</p>
+        <p><a href="https://orcid.org/0009-0001-1001-4065">https://orcid.org/0009-0001-1001-4065</a></p>
+
+        <p>Dernière version :</p>
+        <p><a href="https://doi.org/10.5281/zenodo.18114393">https://doi.org/10.5281/zenodo.18114393</a></p>
+
+        <p>Version citée :</p>
+        <p>v1 — <a href="https://doi.org/10.5281/zenodo.18114393">https://doi.org/10.5281/zenodo.18114393</a></p>
+
+        <p>Licence :</p>
+        <p>CC BY 4.0</p>
+      </div>
+    </details>
+  </header>
+
+  <section>
+    <h2>Résumé (FR)</h2>
+    <p>
+      Ce rapport décrit la conception et la validation d’un flux de travail reproductible pour repérer, dans un corpus documentaire médiéval stocké localement, un complexe lexical centré sur <em>óðal</em>/<em>aþal</em>. Le corpus rassemble des chartes du <em>Diplomatarium Islandicum</em> et des textes norvégiens en latin médiéval (Bibliothèque nationale de Norvège), ingérés depuis plusieurs formats (<code>.txt</code>, <code>TEI P5 .xml</code>, <code>.xhtml</code>). La récupération lexicale repose sur un appariement explicite et versionné en mode <code>strict</code> (sans expansion orthographique implicite), avec une traversée déterministe et une déduplication (préférence pour <code>.xml</code> lorsque plusieurs représentations existent). Un contrôle du bruit en deux étapes (avant et après appariement) supprime les artefacts de type index, avec comptage des suppressions pour auditabilité. Les sorties structurées (TSV/JSONL/manifest) conservent provenance, classe de règle et couche d’extraction, afin de fournir une base exploitable pour l’analyse philologique et linguistique.
+    </p>
+  </section>
+
+  <section>
+    <h2>Abstract (EN)</h2>
+    <p>
+      This report documents the design, execution, and validation of a reproducible workflow for mining a locally stored medieval documentary corpus for the <em>óðal</em>/<em>aþal</em> lexical complex. The corpus combines <em>Diplomatarium Islandicum</em> charter material with Norwegian Medieval Latin texts, ingested from heterogeneous serializations (<code>.txt</code>, <code>TEI P5 .xml</code>, and <code>.xhtml</code>). Lexical recovery uses an explicit, versioned cluster matcher in <code>strict</code> mode, with deterministic traversal and de-duplication (preferring <code>.xml</code> when multiple representations exist) and parameterized TEI extraction. A two-stage noise-control regime removes index-like material both pre-match and post-match, with removal counts recorded for auditability. The documented run processed 15,777 documents, produced 2,000 raw matches, excluded 685 index-like hits, and retained 1,315 attestations, with per-hit provenance and extraction-layer information preserved.
+    </p>
+  </section>
+
+  <section>
+    <h2>Référence bibliographique</h2>
+    <p>
+      Narimani, Arvid (2026). <em>Building a Reproducible Mining Pipeline for óðal/aþal lexical complex in Diplomatarium Islandicum and Norwegian Medieval Latin Texts</em>. Zenodo (v1).
+      <a href="https://doi.org/10.5281/zenodo.18114393">https://doi.org/10.5281/zenodo.18114393</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Texte intégral (PDF)</h2>
+    <iframe
+      src="https://drive.google.com/file/d/1Su1FCfLxJwx2XRcCQuGloy7NLWwC2JHo/preview"
+      width="100%"
+      height="900"
+      style="border: 1px solid rgba(17,24,39,0.18); border-radius: 8px;"
+      allow="autoplay"
+      title="Building a Reproducible Mining Pipeline for óðal/aþal lexical complex in Diplomatarium Islandicum and Norwegian Medieval Latin Texts (PDF)">
+    </iframe>
+  </section>
+</body>
+</html>
 
