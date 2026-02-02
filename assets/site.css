@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
 
 /* =========================================================
    Variables
@@ -35,7 +35,7 @@ body {
   background: var(--bg);
   color: var(--text);
 
-  font-family: "Merriweather", serif;
+  font-family: "STIX Two Text", serif;
   font-weight: var(--text-weight);
   line-height: 1.55;
 
