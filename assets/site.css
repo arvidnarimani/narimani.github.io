@@ -1,16 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
 
 /* =========================================================
    Variables
    ========================================================= */
 :root {
-  /* Typography */
-  --text-weight: 400;
-  --strong-weight: 600;      /* set to 500 if you want lighter emphasis */
-  --heading-weight: 600;
-
-  /* Nordic palette */
-  --bg: #f3f5f7;             /* cool off-white */
+  /* Nordic palette (darker than before) */
+  --bg: #c9d1d8;             /* darker cool grey-blue */
   --text: #111827;           /* deep slate */
   --link: #0f3d5e;           /* fjord blue */
   --border: rgba(17, 24, 39, 0.18);
@@ -20,6 +15,11 @@
   --content-pad: 20px;
   --page-top: 60px;
   --block-gap: 28px;
+
+  /* Typography weights (were referenced but not defined) */
+  --text-weight: 400;
+  --heading-weight: 600;
+  --strong-weight: 650;
 }
 
 /* =========================================================
@@ -35,7 +35,10 @@ body {
   background: var(--bg);
   color: var(--text);
 
-  font-family: "STIX Two Text", serif;
+  /* Use Literata; keep STIX Two Text as fallback */
+  font-family: "Literata", "STIX Two Text", serif;
+  font-optical-sizing: auto;
+
   font-weight: var(--text-weight);
   line-height: 1.55;
 
@@ -95,17 +98,26 @@ a:hover {
   transform: scale(1.03);
 }
 
-.x-link {
+/* Social icons row (Mastodon + ORCID, etc.) */
+.social-row {
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
+  gap: 0.7em;
 }
-.x-link:hover {
+
+.social-link {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.social-link:hover {
   transform: scale(1.10);
 }
 
-.x-logo {
-  width: 1.1em;
+.social-icon {
+  width: auto;
   height: 1.1em;
+  vertical-align: baseline;
   display: block;
   object-fit: contain;
 }
