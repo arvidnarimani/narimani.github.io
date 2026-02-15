@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap');
 
 /* =========================================================
    Variables
@@ -17,9 +17,9 @@
   --block-gap: 28px;
 
   /* Typography weights */
-  --text-weight: 400;
-  --heading-weight: 600;
-  --strong-weight: 650;
+  --text-weight: 500;        /* Medium */
+  --heading-weight: 600;     /* SemiBold */
+  --strong-weight: 700;      /* Bold (more reliable than 650) */
 
   /* Base font size */
   --body-size: 18px;         /* slightly larger than default */
@@ -41,7 +41,7 @@ body {
   font-family: "STIX Two Text", serif;
   font-weight: var(--text-weight);
   font-size: var(--body-size);
-  line-height: 1.55;
+  line-height: 1.50;
 
   max-width: var(--content-max);
   margin: var(--page-top) auto;
