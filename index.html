@@ -7,10 +7,17 @@
   <title>Arvid Narimani</title>
 
   <style>
-    /* quarter-size logo */
+    /* Make the logo a quarter of whatever it would otherwise render as */
     .mastodon-logo {
-      width: 25%;
-      height: 25%;
+      height: auto;
+      transform: scale(0.25);
+      transform-origin: center;
+      display: block;
+    }
+
+    /* Prevent the link box from reserving the original (larger) space */
+    .mastodon-link {
+      display: inline-block;
     }
   </style>
 </head>
