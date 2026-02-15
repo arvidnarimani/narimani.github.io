@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/site.css">
+
+  <!-- Google Scholar / Highwire-style meta tags -->
+  <meta name="citation_title" content="Building a Reproducible Mining Pipeline for heimskringla.no (MediaWiki) via HTML snapshots + the MediaWiki Action API: Whether the Heimskringla corpus (including the Frostaþingslög) can be searched automatically for an óðal–aþal lexical complex?" />
+  <meta name="citation_author" content="Arvid Narimani" />
+  <!-- Only the year is available in the provided reference -->
+  <meta name="citation_publication_date" content="2026" />
+
+  <!-- DOI -->
+  <meta name="citation_doi" content="10.5281/zenodo.18647092" />
+  <meta name="citation_abstract_html_url" content="https://doi.org/10.5281/zenodo.18647092" />
+
+  <title>Building a Reproducible Mining Pipeline for heimskringla.no (MediaWiki) via HTML snapshots + the MediaWiki Action API — Arvid Narimani</title>
+</head>
+
+<body>
+  <header>
+    <h1>Building a Reproducible Mining Pipeline for heimskringla.no (MediaWiki) via HTML snapshots + the MediaWiki Action API</h1>
+    <p>Whether the Heimskringla corpus (including the Frostaþingslög) can be searched automatically for an óðal–aþal lexical complex?</p>
+
+    <details class="meta">
+      <summary>Metadata</summary>
+
+      <div class="meta-body">
+        <p>Arvid Narimani (2026)</p>
+        <p>Latest version (DOI): <a href="https://doi.org/10.5281/zenodo.18647092">https://doi.org/10.5281/zenodo.18647092</a></p>
+      </div>
+    </details>
+  </header>
+
+  <section>
+    <h2>Description (Technical)</h2>
+    <p>
+      A reproducible, script-driven pipeline is specified for mining the MediaWiki corpus at heimskringla.no for attestations
+      belonging to the curated óðal/aþal lexical complex. The workflow enforces a three-stage separation—(i) URL enumeration,
+      (ii) per-page acquisition, and (iii) extraction plus matching—to isolate coverage decisions from network volatility and to
+      preserve auditability. Corpus-wide coverage is obtained via the MediaWiki Action API using
+      <code>action=query&amp;list=allpages</code> with full continuation handling (<code>apcontinue</code>) and optional redirect
+      exclusion (<code>apfilterredir=nonredirects</code>); a bounded category-harvesting mode is also supported. Each enumerated
+      page is fetched once and persisted as a raw HTML snapshot with accompanying metadata (requested/resolved URL, timestamps,
+      HTTP status, and captured revision identifiers). Text extraction is MediaWiki-aware, preferring the main content container
+      and excluding predictable UI/editorial scaffolding; reference/notes strata can be separated and are excluded by default.
+      Mining is performed against the derived clean-text layer using an invariant philological core (<code>athal_core</code>),
+      while Heimskringla-specific adaptations are confined to span-safe keying normalization to reduce false negatives without
+      rewriting evidential spans. Outputs include an append-only TSV concordance with KWIC context and stable character offsets,
+      per-page text hashes for drift detection, and JSONL run manifests enabling resumable execution and revision-stable replay
+      via captured <code>oldid</code> permalinks.
+    </p>
+  </section>
+
+  <section>
+    <h2>Description (Non-technical)</h2>
+    <p>
+      A practical method is presented for searching the Heimskringla website—an online library built on wiki software—for a
+      specific family of Old Norse words related to inherited land and lineage (óðal/aþal). The approach is designed to be
+      repeatable and trustworthy: first, it makes a complete list of the pages to examine; second, it saves an exact copy of
+      each page as it was retrieved; third, it strips away menus, categories, and other website “scaffolding” so that only the
+      real text is searched. The word-search logic is kept stable and unchanged, so results from different runs or different
+      corpora remain comparable. Every finding is recorded with surrounding context and with enough provenance information to
+      trace it back to the exact page version used, even if the website later changes. The end product is a transparent
+      concordance—essentially a searchable evidence table—that supports philological analysis without relying on manual browsing
+      or unreliable site-wide search boxes.
+    </p>
+  </section>
+
+  <section>
+    <h2>Bibliographic reference</h2>
+    <p>
+      Narimani, A. (2026). <em>Building a Reproducible Mining Pipeline for heimskringla.no (MediaWiki) via HTML snapshots + the
+      MediaWiki Action API: Whether the Heimskringla corpus (including the Frostaþingslög) can be searched automatically for an
+      óðal–aþal lexical complex?</em> Zenodo. <a href="https://doi.org/10.5281/zenodo.18647092">https://doi.org/10.5281/zenodo.18647092</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Full text</h2>
+    <p>
+      DOI landing page: <a href="https://doi.org/10.5281/zenodo.18647092">https://doi.org/10.5281/zenodo.18647092</a>
+    </p>
+
+    <iframe
+      src="https://doi.org/10.5281/zenodo.18647092"
+      width="100%"
+      height="900"
+      style="border: 1px solid rgba(17,24,39,0.18); border-radius: 8px;"
+      allow="autoplay"
+      title="Zenodo record (DOI landing page)">
+    </iframe>
+  </section>
+</body>
+</html>
