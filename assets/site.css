@@ -4,20 +4,20 @@
    Variables
    ========================================================= */
 :root {
-  /* Nordic palette (darker than before) */
-  --bg: #c9d1d8;             /* darker cool grey-blue */
+  /* Nordic palette (darker) */
+  --bg: #aeb7c1;             /* darker cold grey-blue */
   --text: #111827;           /* deep slate */
   --link: #0f3d5e;           /* fjord blue */
   --border: rgba(17, 24, 39, 0.18);
 
   /* Layout */
-  --content-max: 760px;      /* adjust 680–860 to taste */
+  --content-max: 760px;
   --content-pad: 20px;
   --page-top: 60px;
   --block-gap: 28px;
 
   /* Typography weights */
-  --text-weight: 500;        /* Medium-ish */
+  --text-weight: 400;        /* normal */
   --heading-weight: 600;
   --strong-weight: 700;
 
