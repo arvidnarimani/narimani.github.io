@@ -7,16 +7,25 @@
   <title>Arvid Narimani</title>
 
   <style>
-    /* Make the logo a quarter of whatever it would otherwise render as */
-    .mastodon-logo {
-      height: auto;
-      transform: scale(0.25);
-      transform-origin: center;
-      display: block;
+    /* social row aligns exactly like the other text links (same left start, same <p> rhythm) */
+    .social-row {
+      display: inline-flex;
+      align-items: baseline;   /* typographic alignment with text */
+      gap: 0.7em;
     }
 
-    /* Prevent the link box from reserving the original (larger) space */
-    .mastodon-link {
+    .social-link {
+      display: inline-flex;
+      align-items: baseline;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    /* icons scale relative to text size */
+    .social-icon {
+      height: 1em;     /* same ratio as text */
+      width: auto;
+      vertical-align: baseline;
       display: inline-block;
     }
   </style>
@@ -32,12 +41,25 @@
 
     <div class="home-spacer"></div>
 
-    <a class="mastodon-link"
-       href="https://mastodon.social/@ArvidNarimani"
-       aria-label="Mastodon profile"
-       rel="me">
-      <img class="mastodon-logo" src="/assets/logo-purple.svg" alt="Mastodon">
-    </a>
+    <!-- Social links: left-aligned like the other <p> links; icons sized to text -->
+    <p>
+      <span class="social-row">
+        <a class="social-link"
+           href="https://mastodon.social/@ArvidNarimani"
+           aria-label="Mastodon profile"
+           rel="me">
+          <img class="social-icon" src="/assets/logo-black.svg" alt="Mastodon">
+        </a>
+
+        <!-- Replace ORCID_URL with the actual ORCID profile URL, e.g. https://orcid.org/0000-0000-0000-0000 -->
+        <a class="social-link"
+           href="ORCID_URL"
+           aria-label="ORCID profile"
+           rel="me">
+          <img class="social-icon" src="/assets/ORCID-iD_icon_BW_vector.svg" alt="ORCID iD">
+        </a>
+      </span>
+    </p>
   </main>
 </body>
 </html>
