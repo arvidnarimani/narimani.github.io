@@ -22,7 +22,7 @@
   --strong-weight: 700;
 
   /* Base font size */
-  --body-size: 18px;
+  --body-size: 19px;
 }
 
 /* =========================================================
@@ -43,7 +43,7 @@ body {
 
   font-weight: var(--text-weight);
   font-size: var(--body-size);
-  line-height: 1.55;
+  line-height: 1.50;
 
   max-width: var(--content-max);
   margin: var(--page-top) auto;
